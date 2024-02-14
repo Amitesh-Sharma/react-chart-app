@@ -24,8 +24,8 @@ This web application is built using ReactJS and includes a data table and a bar 
 ## Getting Started
 
 1. Clone the repository:
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/Amitesh-Sharma/react-chart-app.git 
+   cd react-chart-app
 
 ## Install dependencies
 
