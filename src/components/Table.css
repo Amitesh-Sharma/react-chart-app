@@ -1,0 +1,28 @@
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+  }
+  thead tr {
+    border-bottom: 2px solid #ddd;
+  }
+  thead th {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  tbody td input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+  }
+  .Checkbox-cursor{
+    cursor: pointer;
+  }
+  

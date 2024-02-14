@@ -1,0 +1,42 @@
+// src/components/SearchBar.js
+import React, { useState } from 'react';
+import { FaSearch, FaTimes } from 'react-icons/fa'; // Assuming you have these icons imported
+
+const SearchBar = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isCleared, setIsCleared] = useState(true);
+
+  const handleInputChange = (event) => {
+    const inputText = event.target.value;
+    setSearchTerm(inputText);
+    setIsCleared(inputText === ''); // Update isCleared based on inputText
+  };
+
+  const handleSearchClick = () => {
+    onSearch(searchTerm);
+  };
+
+  const handleClearClick = () => {
+    setSearchTerm('');
+    setIsCleared(true);
+    onSearch(''); // Reset the search term to show all items
+  };
+
+  return (
+    <div className="search-bar">
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleInputChange}
+      />
+      {isCleared ? (
+        <FaSearch className="search-icon" onClick={handleSearchClick} />
+      ) : (
+        <FaTimes className="close-icon" onClick={handleClearClick} />
+      )}
+    </div>
+  );
+};
+
+export default SearchBar;
